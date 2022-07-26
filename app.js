@@ -2,7 +2,6 @@
 let hello = prompt("What's your name?:");
 function isim() {
   document.getElementById("myName").innerHTML = hello;
-  return;
 }
 isim();
 
@@ -22,16 +21,25 @@ function picture() {
   document.querySelector(".randomWord").textContent = "Good Day";
 }
 
-//click me
-document.querySelector(".clicker").addEventListener("click", clickk);
-let val = document.querySelector(".clicker");
+// experience que
+let exp = parseInt(prompt("How many years are you software development", 5));
+console.log(exp);
+function deney() {
+  if (exp > 5) {
+    //create element metode
+    let photo = document.createElement("img");
+    photo.src = "https://source.unsplash.com/random";
+    photo.classList.add("myPhoto");
+    document.querySelector(".clicker").appendChild(photo);
+  } else if (exp < 5) {
+    //click me
+    document.querySelector(".clicker").addEventListener("click", clickk);
+    let val = document.querySelector(".clicker");
 
-function clickk(e) {
-  val.style.background = "black";
+    function clickk(e) {
+      val.style.background = "black";
+    }
+  }
 }
-
-//create element metode
-let photo = document.createElement("img");
-photo.src = "https://source.unsplash.com/random";
-photo.classList.add("myPhoto");
-document.querySelector(".clicker").appendChild(photo);
+deney();
+console.log(deney.toString);
